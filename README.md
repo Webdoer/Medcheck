@@ -122,3 +122,7 @@ PostgreSQL
 - [ ] Enable HTTPS (TLS termination via nginx/caddy)
 - [ ] Set `disable: false` in `next.config.ts` PWA config
 - [ ] Run `npm run build` for production bundle
+TEam name:
+aryaman sharma
+siddhartha pandey
+sanyam kumar
