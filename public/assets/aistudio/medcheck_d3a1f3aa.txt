@@ -1,0 +1,27 @@
+MedCheck: App Description
+A free, mobile-first app to check medicine batches against CDSCO alerts
+One-liner
+MedCheck helps anyone in India check if a medicine batch has been flagged by CDSCO, in their own language, in seconds.
+Short description
+MedCheck is a free, mobile-first app that lets you check whether a medicine batch appears in the government's lists of substandard (NSQ) or spurious drugs. Scan a label or type the name and batch number, and get a clear, calm answer in Hindi, English, Tamil, Bengali, Marathi or Telugu, with a "Listen" button that reads the result aloud.
+Full description
+The problem
+Every month, CDSCO publishes lists of medicine batches that failed quality tests or were found to be spurious. They are long PDFs, in English, and almost nobody sees them. Most people have no easy way to find out whether the strip in their hand is on the list.
+What MedCheck does
+MedCheck turns those alerts into a simple check anyone can use. Photograph the medicine label, or enter the name and batch number, and MedCheck compares it with the flagged batches. It copes with real-world mistakes such as blurry photos and look-alike characters (0 and O, 1 and I), and it shows one of three clear results:
+• Flagged: this batch is on a CDSCO alert, with the reason, state, month and source.
+• Possible match: this looks similar to a flagged batch. You compare the batch numbers side by side, with the differing characters highlighted, and confirm before any details are shown.
+• Not found: this batch isn't in our list. This is never a guarantee that a medicine is good, and the app says so plainly.
+Designed for everyone
+• Six languages, with Hindi first.
+• Large, readable text and thumb-friendly buttons for one-handed use and for older users.
+• Voice read-out of every result.
+• A calm, soft design: sage, sky blue, cream and lavender, with gentle animations and no alarming screens.
+• Works on low-end phones, and installs like an app.
+Trust and safety
+• Shows when the data was last updated.
+• Gives no dosage, diagnosis or treatment advice. For doubts it points to a pharmacist, a doctor and the CDSCO helpline (1800-11-4477), which can be called with one tap.
+• Reading a label photo uses AI. The photo is used only to read the text and isn't kept by MedCheck.
+• Checks are saved only on your own phone.
+Who it's for
+Parents buying medicine for a child, elderly people and their caregivers, students, pharmacists and shopkeepers, and anyone who has ever wondered whether the strip they bought is okay.

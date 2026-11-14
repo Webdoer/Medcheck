@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MedCheck (मेडचेक)</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#214e43", "primary": "#386458", "on-secondary": "#ffffff", "tertiary-container": "#7a6e97", "primary-container": "#507d70", "surface-bright": "#fcf9f2", "on-primary-fixed": "#002019", "surface-variant": "#e5e2db", "tertiary-fixed-dim": "#cebfed", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#4c4167", "on-tertiary-container": "#fffbff", "surface": "#fcf9f2", "inverse-on-surface": "#f3f0e9", "on-primary-container": "#f4fffa", "on-error": "#ffffff", "background": "#fcf9f2", "surface-container-highest": "#e5e2db", "on-tertiary-fixed": "#1f1539", "on-background": "#1c1c18", "secondary-fixed": "#c7e7ff", "error": "#ba1a1a", "error-container": "#ffdad6", "surface-dim": "#dcdad3", "secondary-fixed-dim": "#a7cbe6", "inverse-surface": "#31312c", "outline": "#717975", "tertiary": "#61567d", "on-secondary-fixed": "#001e2e", "on-tertiary": "#ffffff", "outline-variant": "#c0c8c4", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#a1d0c1", "on-error-container": "#93000a", "tertiary-fixed": "#e9ddff", "surface-container-low": "#f6f3ec", "primary-fixed": "#bdeddd", "surface-container-high": "#ebe8e1", "on-secondary-fixed-variant": "#264b61", "inverse-primary": "#a1d0c1", "on-surface-variant": "#404845", "secondary-container": "#bde2fd", "surface-tint": "#3a675b", "on-secondary-container": "#41657c", "secondary": "#3f627a", "surface-container": "#f1eee7", "on-surface": "#1c1c18" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-xl": "2.25rem", "margin-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1.5rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-xl": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["12px", {"lineHeight": "18px", "letterSpacing": "0.4px", "fontWeight": "500"}], "headline-xl": ["32px", {"lineHeight": "40px", "fontWeight": "700"}], "label-lg": ["16px", {"lineHeight": "22px", "letterSpacing": "0.2px", "fontWeight": "600"}], "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "body-lg": ["17px", {"lineHeight": "26px", "fontWeight": "400"}], "headline-xl-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "headline-lg-mobile": ["21px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.3px", "fontWeight": "600"}], "body-xl": ["19px", {"lineHeight": "30px", "fontWeight": "400"}] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;background-color:#fcf9f2;color:#1c1c18;font-family:'Plus Jakarta Sans',sans-serif;-webkit-tap-highlight-color:transparent;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(43,58,74,0.05)] pt-safe"><div class="h-20 px-4 flex items-center justify-between gap-2"><div class="flex items-center gap-2.5 min-w-0"><img alt="MedCheck Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDRbnnP3cjFxDAO82JMTWVU1w1eks2F_4ytHIW9Y_qptNxyj6AIhE2xvNhsv7QcOr8EDqorW4AileRDfNK7zH_EX5sT1pZPrFk2jaX7zeTAq6tTz0sjeGUaqxKaS3_n4j-6G-kvFBGas6GGBp_zcTfhLSohS8uTRgJPIsECcZN0_oVvJ4mJ2Okw9wmI9vfDkNTLVmpq2HXMun6YF1ZvxK162PrBY8jIflTdn3ri1tY"/><div class="flex flex-col min-w-0"><div class="flex items-baseline gap-1.5"><span class="font-headline-md text-headline-md text-secondary tracking-tight leading-none">MedCheck</span><span class="font-label-sm text-label-sm text-secondary/80 font-medium leading-none">(मेडचेक)</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Help And Privacy</span></div></div><div class="flex items-center gap-2 shrink-0"><button class="min-h-[44px] px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center gap-1.5 transition-colors text-secondary" type="button"><span class="material-symbols-outlined text-[18px]">language</span><span class="font-label-sm text-label-sm font-semibold">हिंदी / EN</span></button><a aria-label="CDSCO Helpline 1800-11-4477" class="min-w-[44px] min-h-[44px] rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-secondary relative transition-colors" href="tel:1800114477"><span class="material-symbols-outlined text-[20px]">support_agent</span><span class="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span></span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-4 pt-20 pb-28 bg-surface flex-grow"><div class="flex flex-col w-full pb-8 space-y-5">
+<!-- Hero Trust Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-5 shadow-sm">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-primary-fixed/20 pointer-events-none blur-2xl"></div>
+<div class="relative z-10 flex flex-col space-y-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[19px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold tracking-wide uppercase">जनहित स्वास्थ्य सेवा • Public Health Utility</span>
+</div>
+<div class="flex flex-col space-y-1">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">आपकी सुरक्षा और गोपनीयता हमारी प्राथमिकता है</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Your health, privacy, and peace of mind are shielded by zero-tracking government standards.</p>
+</div>
+<!-- Trust Badges Grid -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">enhanced_encryption</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight">100% ऑन-डिवाइस</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant leading-none mt-0.5 truncate">लोकल फोटो प्रोसेसिंग</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">sync_saved_locally</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight">CDSCO सत्यापित</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant leading-none mt-0.5 truncate">दैनिक डेटा सिंक</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Direct Emergency Support Card -->
+<div class="relative rounded-xl bg-surface-container-lowest p-5 shadow-sm overflow-hidden">
+<div class="flex items-start justify-between gap-3 mb-3">
+<div class="flex flex-col">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[11px] font-label-sm font-semibold w-fit mb-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          24×7 नि:शुल्क सेवा (Toll Free)
+        </div>
+<h3 class="font-headline-md text-headline-md text-on-surface">राष्ट्रीय औषधि हेल्पलाइन</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">National Drug Regulatory &amp; Adverse Effect Cell</p>
+</div>
+<div class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[24px]">headset_mic</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+      स्वास्थ्य एवं परिवार कल्याण मंत्रालय, भारत सरकार (Ministry of Health &amp; Family Welfare). दवा की गुणवत्ता, प्रतिकूल प्रभाव या तुरंत सलाह हेतु संपर्क करें।
+    </p>
+<!-- Tap-To-Call Button -->
+<a class="w-full min-h-[52px] px-5 py-3 rounded-full bg-primary hover:bg-primary-container text-on-primary flex items-center justify-between shadow-sm active:scale-[0.98] transition-all" href="tel:1800114477">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-on-primary/15 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">call</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-bold tracking-wide">1800-11-4477</span>
+<span class="font-label-sm text-[11px] text-on-primary/80 leading-none">कॉल करने के लिए टैप करें</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-primary/90">arrow_forward</span>
+</a>
+</div>
+<!-- Reassurance Visual Feature -->
+<div class="relative rounded-xl overflow-hidden shadow-sm bg-surface-container">
+<div class="bg-cover bg-center w-full h-36" data-alt="A compassionate, trusted Indian medical officer and pharmacist in a clean community dispensary in Jaipur, holding safe sealed medicine strip, warm sunlight pouring through clinic window, soft tactile aesthetic in sage and muted sand tones, authentic Indian healthcare reassurance" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcHSVpeB4rACIhVgD-CEUl6tJk2WyD6vl6h-GVJjSuLhLg9lMDSbt9aDEQq7fpuPmvrkmZ6_fWDMSdxUu7Zl1wj1mDzSaGNoiKcfmvDYdurAyM3cbldxHIhneft7HU_8lNAHvmLTLUAXPoCFxfnD6WJz5xc3MJrguI5cvJRxZprN9s43E4seD3eZH4LPfH8kEPtePlWclJXTWLQwf_Ol3BZpFHXtdyLz6NvXOrdfw')"></div>
+<div class="p-4 bg-surface-container-lowest flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0">
+<span class="material-symbols-outlined text-[22px]">health_and_safety</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">घबराएं नहीं, सही सलाह लें</span>
+<span class="font-body-md text-[13px] text-on-surface-variant">यदि दवा में शंका हो तो सेवन तुरंत रोकें व पर्ची संभाल कर रखें।</span>
+</div>
+</div>
+</div>
+<!-- Frequently Asked Questions (Accordion) -->
+<div class="flex flex-col space-y-3">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">सामान्य प्रश्न (FAQs)</h3>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">मदद केंद्र</span>
+</div>
+<!-- Accordion Item 1 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<button aria-expanded="false" class="faq-trigger w-full px-4 py-3.5 flex items-center justify-between text-left gap-3 focus:outline-none" type="button">
+<span class="font-label-md text-label-md text-on-surface font-semibold">यदि मेरी दवा घटिया (NSQ) निकली और मैंने खा ली है, तो क्या करूँ?</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-4 pb-4 pt-1 text-on-surface-variant font-body-md text-body-md space-y-2">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">stethoscope</span>
+<span class="text-on-surface font-label-md text-label-md">1. सबसे पहले अपने नजदीकी डॉक्टर या प्राथमिक स्वास्थ्य केंद्र (PHC) से मिलें।</span>
+</div>
+<p>2. घबराएं नहीं। बची हुई दवा, उसका फॉयल/रैपर और मेडिकल स्टोर का बिल सुरक्षित रखें।</p>
+<p>3. राष्ट्रीय हेल्पलाइन (1800-11-4477) पर बैच नंबर व साइड इफेक्ट्स की सूचना दर्ज कराएं ताकि अन्य नागरिकों को भी सचेत किया जा सके।</p>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<button aria-expanded="false" class="faq-trigger w-full px-4 py-3.5 flex items-center justify-between text-left gap-3 focus:outline-none" type="button">
+<span class="font-label-md text-label-md text-on-surface font-semibold">दवा की फोटो क्या सर्वर पर सेव होती है?</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-4 pb-4 pt-1 text-on-surface-variant font-body-md text-body-md space-y-2">
+<p><strong>बिल्कुल नहीं।</strong> आपकी गोपनीयता सर्वोच्च है। जब आप कैमरे से बैच नंबर स्कैन करते हैं, तो टेक्स्ट की पहचान (OCR) पूरी तरह से आपके मोबाइल फोन के अंदर ही होती है।</p>
+<p>कोई भी तस्वीर बाहरी सर्वर या क्लाउड पर अपलोड नहीं की जाती। ऐप केवल शुद्ध टेक्स्ट (जैसे बैच कोड) को राष्ट्रीय अलर्ट सूची से मिलाता है।</p>
+</div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<button aria-expanded="false" class="faq-trigger w-full px-4 py-3.5 flex items-center justify-between text-left gap-3 focus:outline-none" type="button">
+<span class="font-label-md text-label-md text-on-surface font-semibold">CDSCO NSQ सूची क्या है?</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-4 pb-4 pt-1 text-on-surface-variant font-body-md text-body-md space-y-2">
+<p>NSQ का अर्थ है <strong>"Not of Standard Quality" (मानक गुणवत्ता के अनुरूप नहीं)</strong>।</p>
+<p>केंद्रीय औषधि मानक नियंत्रण संगठन (CDSCO) और राज्य औषधि परीक्षण प्रयोगशालाएं हर महीने बाजार से रैंडम नमूने लेकर जांच करती हैं। जो दवाएं मानकों पर खरी नहीं उतरतीं, उनकी सूची व बैच नंबर सार्वजनिक अलर्ट के रूप में जारी किए जाते हैं।</p>
+</div>
+</div>
+<!-- Accordion Item 4 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<button aria-expanded="false" class="faq-trigger w-full px-4 py-3.5 flex items-center justify-between text-left gap-3 focus:outline-none" type="button">
+<span class="font-label-md text-label-md text-on-surface font-semibold">नकली या संदिग्ध दवा की शिकायत कैसे करें?</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-4 pb-4 pt-1 text-on-surface-variant font-body-md text-body-md space-y-2">
+<p>आप संबंधित राज्य के औषधि नियंत्रक (State Drug Inspector) अथवा CDSCO जोनल कार्यालय में लिखित शिकायत दे सकते हैं।</p>
+<p>साथ ही, राष्ट्रीय हेल्पलाइन पर कॉल करके 'Spurious Drug Grievance' दर्ज करवा सकते हैं। शिकायतकर्ता की पहचान गोपनीय रखी जाती है।</p>
+</div>
+</div>
+</div>
+<!-- Accessibility & Comfort Controls -->
+<div class="flex flex-col space-y-3 pt-2">
+<div class="px-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">सुलभता व ध्वनि सेटिंग्स (Accessibility)</h3>
+</div>
+<div class="rounded-xl bg-surface-container-lowest p-4 shadow-sm space-y-4">
+<!-- Voice Speed Control -->
+<div class="flex flex-col space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">volume_up</span>
+<span class="font-label-md text-label-md text-on-surface">बोलकर पढ़ने की गति (Voice Speed)</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-secondary" id="speed-label">सामान्य (1.0x)</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="speed-btn min-h-[44px] rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm py-2 px-3 text-center transition-all" data-speed="0.8" type="button">धीमी (0.8x)</button>
+<button class="speed-btn active-speed min-h-[44px] rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold py-2 px-3 text-center transition-all shadow-sm" data-speed="1.0" type="button">सामान्य (1.0x)</button>
+<button class="speed-btn min-h-[44px] rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm py-2 px-3 text-center transition-all" data-speed="1.2" type="button">तेज़ (1.2x)</button>
+</div>
+</div>
+<!-- High Contrast Text Toggle -->
+<div class="pt-2 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[19px]">contrast</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">उच्च कंट्रास्ट टेक्स्ट (High Contrast)</span>
+<span class="font-label-sm text-[12px] text-on-surface-variant">बुजुर्गों व कमजोर दृष्टि हेतु स्पष्ट अक्षर</span>
+</div>
+</div>
+<button aria-checked="false" class="w-12 h-7 rounded-full bg-surface-container-highest p-0.5 transition-colors focus:outline-none flex items-center" id="contrast-toggle" role="switch" type="button">
+<span class="w-6 h-6 rounded-full bg-surface-container-lowest shadow-sm transform transition-transform duration-200" id="contrast-knob"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- App Info & Open Gov Footer -->
+<div class="rounded-xl bg-surface-container-low p-4 text-center space-y-2">
+<div class="flex items-center justify-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-md text-label-md font-semibold">MedCheck (मेडचेक) v2.4</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant max-w-xs mx-auto leading-relaxed">
+      नागरिकों की सुरक्षा हेतु विकसित सार्वजनिक स्वास्थ्य पहल।<br/>
+      डेटा स्रोत: CDSCO पोर्टल एवं भारत सरकार ओपन डेटा प्लेटफॉर्म (data.gov.in).
+    </p>
+<div class="pt-1 flex items-center justify-center gap-3 text-secondary">
+<a class="font-label-sm text-[12px] hover:underline" href="#">गोपनीयता नीति</a>
+<span>•</span>
+<a class="font-label-sm text-[12px] hover:underline" href="#">उपयोग की शर्तें</a>
+<span>•</span>
+<a class="font-label-sm text-[12px] hover:underline" href="#">प्रतिक्रिया दें</a>
+</div>
+</div>
+</div>
+<script>
+  // Simple Accordion Behavior
+  document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+      const content = trigger.nextElementSibling;
+      const icon = trigger.querySelector('.material-symbols-outlined');
+      
+      // Close other accordions
+      document.querySelectorAll('.faq-trigger').forEach(other => {
+        if (other !== trigger) {
+          other.setAttribute('aria-expanded', 'false');
+          other.nextElementSibling.classList.add('hidden');
+          other.querySelector('.material-symbols-outlined').style.transform = 'rotate(0deg)';
+        }
+      });
+
+      if (isExpanded) {
+        trigger.setAttribute('aria-expanded', 'false');
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        trigger.setAttribute('aria-expanded', 'true');
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  // Voice Speed Controls
+  const speedButtons = document.querySelectorAll('.speed-btn');
+  const speedLabel = document.getElementById('speed-label');
+  speedButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      speedButtons.forEach(b => {
+        b.className = 'speed-btn min-h-[44px] rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm py-2 px-3 text-center transition-all';
+      });
+      btn.className = 'speed-btn active-speed min-h-[44px] rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold py-2 px-3 text-center transition-all shadow-sm';
+      speedLabel.textContent = btn.textContent;
+    });
+  });
+
+  // Contrast Switch Toggle
+  const contrastToggle = document.getElementById('contrast-toggle');
+  const contrastKnob = document.getElementById('contrast-knob');
+  contrastToggle.addEventListener('click', () => {
+    const isChecked = contrastToggle.getAttribute('aria-checked') === 'true';
+    if (isChecked) {
+      contrastToggle.setAttribute('aria-checked', 'false');
+      contrastToggle.classList.remove('bg-primary');
+      contrastToggle.classList.add('bg-surface-container-highest');
+      contrastKnob.style.transform = 'translateX(0px)';
+      document.body.classList.remove('contrast-125');
+    } else {
+      contrastToggle.setAttribute('aria-checked', 'true');
+      contrastToggle.classList.remove('bg-surface-container-highest');
+      contrastToggle.classList.add('bg-primary');
+      contrastKnob.style.transform = 'translateX(20px)';
+      document.body.classList.add('contrast-125');
+    }
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_-2px_rgba(43,58,74,0.06)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-20 px-2 max-w-lg mx-auto"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[52px] py-1 text-on-surface-variant hover:text-on-surface transition-all rounded-2xl" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">shield_with_house</span><span class="font-label-sm text-label-sm leading-tight mt-0.5">होम / Home</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[52px] -mt-4 py-1 text-on-surface-variant hover:text-on-surface transition-all" data-path="scan-and-check" href="#"><div class="w-12 h-12 rounded-full bg-primary text-on-primary shadow-[0_8px_16px_rgba(56,100,88,0.28)] flex items-center justify-center mb-0.5"><span class="material-symbols-outlined text-[24px]">photo_camera</span></div><span class="font-label-sm text-label-sm font-semibold text-primary leading-tight">दवा जांचें</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[52px] py-1 text-on-surface-variant hover:text-on-surface transition-all rounded-2xl" data-path="history" href="#"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span class="font-label-sm text-label-sm leading-tight mt-0.5">इतिहास</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[52px] py-1 transition-all rounded-2xl text-primary font-semibold" data-path="help-and-privacy" href="#"><span class="material-symbols-outlined text-[24px]">health_and_safety</span><span class="font-label-sm text-label-sm leading-tight mt-0.5">मदद व सुरक्षा</span></a></div></nav></body></html>

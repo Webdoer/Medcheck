@@ -1,0 +1,11 @@
+{
+  "name": "MedCheck",
+  "description": "A free, mobile-first public health app to check medicine batches against CDSCO NSQ and spurious drug alerts in six Indian languages.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

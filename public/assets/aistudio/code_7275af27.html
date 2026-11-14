@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MedCheck (मेडचेक)</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#214e43", "primary": "#386458", "on-secondary": "#ffffff", "tertiary-container": "#7a6e97", "primary-container": "#507d70", "surface-bright": "#fcf9f2", "on-primary-fixed": "#002019", "surface-variant": "#e5e2db", "tertiary-fixed-dim": "#cebfed", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#4c4167", "on-tertiary-container": "#fffbff", "surface": "#fcf9f2", "inverse-on-surface": "#f3f0e9", "on-primary-container": "#f4fffa", "on-error": "#ffffff", "background": "#fcf9f2", "surface-container-highest": "#e5e2db", "on-tertiary-fixed": "#1f1539", "on-background": "#1c1c18", "secondary-fixed": "#c7e7ff", "error": "#ba1a1a", "error-container": "#ffdad6", "surface-dim": "#dcdad3", "secondary-fixed-dim": "#a7cbe6", "inverse-surface": "#31312c", "outline": "#717975", "tertiary": "#61567d", "on-secondary-fixed": "#001e2e", "on-tertiary": "#ffffff", "outline-variant": "#c0c8c4", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#a1d0c1", "on-error-container": "#93000a", "tertiary-fixed": "#e9ddff", "surface-container-low": "#f6f3ec", "primary-fixed": "#bdeddd", "surface-container-high": "#ebe8e1", "on-secondary-fixed-variant": "#264b61", "inverse-primary": "#a1d0c1", "on-surface-variant": "#404845", "secondary-container": "#bde2fd", "surface-tint": "#3a675b", "on-secondary-container": "#41657c", "secondary": "#3f627a", "surface-container": "#f1eee7", "on-surface": "#1c1c18" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-xl": "2.25rem", "margin-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1.5rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-xl": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["12px", {"lineHeight": "18px", "letterSpacing": "0.4px", "fontWeight": "500"}], "headline-xl": ["32px", {"lineHeight": "40px", "fontWeight": "700"}], "label-lg": ["16px", {"lineHeight": "22px", "letterSpacing": "0.2px", "fontWeight": "600"}], "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "body-lg": ["17px", {"lineHeight": "26px", "fontWeight": "400"}], "headline-xl-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "headline-lg-mobile": ["21px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.3px", "fontWeight": "600"}], "body-xl": ["19px", {"lineHeight": "30px", "fontWeight": "400"}] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;background-color:#fcf9f2;color:#1c1c18;font-family:'Plus Jakarta Sans',sans-serif;-webkit-tap-highlight-color:transparent;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(43,58,74,0.05)] pt-safe"><div class="h-20 px-4 flex items-center justify-between gap-2"><div class="flex items-center gap-2.5 min-w-0"><img alt="MedCheck Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDRbnnP3cjFxDAO82JMTWVU1w1eks2F_4ytHIW9Y_qptNxyj6AIhE2xvNhsv7QcOr8EDqorW4AileRDfNK7zH_EX5sT1pZPrFk2jaX7zeTAq6tTz0sjeGUaqxKaS3_n4j-6G-kvFBGas6GGBp_zcTfhLSohS8uTRgJPIsECcZN0_oVvJ4mJ2Okw9wmI9vfDkNTLVmpq2HXMun6YF1ZvxK162PrBY8jIflTdn3ri1tY"/><div class="flex flex-col min-w-0"><div class="flex items-baseline gap-1.5"><span class="font-headline-md text-headline-md text-secondary tracking-tight leading-none">MedCheck</span><span class="font-label-sm text-label-sm text-secondary/80 font-medium leading-none">(मेडचेक)</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Scan And Check</span></div></div><div class="flex items-center gap-2 shrink-0"><button class="min-h-[44px] px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center gap-1.5 transition-colors text-secondary" type="button"><span class="material-symbols-outlined text-[18px]">language</span><span class="font-label-sm text-label-sm font-semibold">हिंदी / EN</span></button><a aria-label="CDSCO Helpline 1800-11-4477" class="min-w-[44px] min-h-[44px] rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-secondary relative transition-colors" href="tel:1800114477"><span class="material-symbols-outlined text-[20px]">support_agent</span><span class="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span></span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-4 pt-20 pb-28 bg-surface flex-grow"><div class="flex flex-col w-full relative select-none">
+<!-- Viewfinder Stage Container -->
+<div class="relative w-full rounded-3xl overflow-hidden shadow-xl bg-inverse-surface aspect-[3/4] flex flex-col justify-between items-center p-4">
+<!-- Camera Background Visual Placeholder -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center brightness-90" data-alt="Close up realistic macro photography of an Indian pharmaceutical paracetamol blister foil strip placed on a wooden medical dispensary table, soft natural daylight, visible printed batch number, slight lens blur depth of field, warm soothing clinical documentary style" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxsg3HLwKwqHnMkPFbE24AeBEoQOFkuAnk2nrf3lBO046EzPavmJFrFo-m5EMBTvkAXKOxzhHIe2Z2KlNRQoQPfqFky4J8Ghh8rkRz6Kp9t6vy7PaIyDKikXN-ZrLtGxNGgqs0QjewRicIusSO1PApL8I822uolICfEArO1h3Qhv-CaB1J2pJplyhMiiGxdk5Fy4TVVzi7cDBriXbauozrTKTngRgKMAdorcEo59g')">
+</div>
+<!-- Soft Dark Mask with Cutout Overlay -->
+<div class="absolute inset-0 bg-[#1E2833]/80 backdrop-blur-[2px] pointer-events-none"></div>
+<!-- Top Floating Toolbar -->
+<div class="relative z-20 w-full flex items-center justify-between gap-2 pt-1">
+<button aria-label="वापस जाएं (Go Back)" class="w-11 h-11 rounded-full bg-surface/20 backdrop-blur-md hover:bg-surface/30 active:scale-95 text-surface-container-lowest flex items-center justify-center transition-all shadow-sm" id="btn-close" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+<button class="min-h-[44px] px-3.5 py-1.5 rounded-full bg-surface/20 backdrop-blur-md hover:bg-surface/30 active:scale-95 text-surface-container-lowest flex items-center gap-2 transition-all shadow-sm" id="btn-torch" type="button">
+<span class="material-symbols-outlined text-[19px] transition-transform" id="torch-icon">flashlight_on</span>
+<span class="font-label-sm text-label-sm" id="torch-text">टॉर्च ऑन</span>
+</button>
+<button aria-label="स्कैनिंग टिप्स" class="w-11 h-11 rounded-full bg-surface/20 backdrop-blur-md hover:bg-surface/30 active:scale-95 text-surface-container-lowest flex items-center justify-center transition-all shadow-sm" id="btn-tips" type="button">
+<span class="material-symbols-outlined text-[22px]">lightbulb</span>
+</button>
+</div>
+<!-- Central Viewfinder Scanning Box (280x280px representation) -->
+<div class="relative z-10 w-[260px] h-[260px] sm:w-[280px] sm:h-[280px] rounded-[24px] overflow-hidden flex flex-col justify-between p-3.5 shadow-[0_0_40px_rgba(56,100,88,0.25)]">
+<!-- Clear cutout window showing underlying image -->
+<div class="absolute inset-0 bg-cover bg-center -z-10 scale-[1.08] filter contrast-110" data-alt="High contrast macro focus shot of medicinal batch printing text on metallic aluminum foil strip showing B.No 4019 and MFG date under soft clinical light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8OmJX6-FD4orMjEczM_bPFntwqOuFTcGLFjVeuqfSGhA3aaylFPTB5GsPFdwa8ZEeRenPmUKUFaZBCA2rLe064aPSkyCbEng_E9z24VFoXMFuos2xqMoGB8fsewhPJ2zDPcLbj9gml86qfNGePVk6Y-_JN9OwUx60bpnNLt-pKCwDB1pVDP2XwgNmcOcJqv2xgv7QlZQhYT8jHzzSRb6Avxo6lTW4FHvMYZ3VYSQ')">
+</div>
+<!-- Corner Brackets (Glowing Sage) -->
+<!-- Top Left -->
+<div class="absolute top-0 left-0 w-8 h-8 rounded-tl-[24px] border-t-[3.5px] border-l-[3.5px] border-primary-fixed shadow-[0_0_12px_rgba(189,237,221,0.6)]"></div>
+<!-- Top Right -->
+<div class="absolute top-0 right-0 w-8 h-8 rounded-tr-[24px] border-t-[3.5px] border-r-[3.5px] border-primary-fixed shadow-[0_0_12px_rgba(189,237,221,0.6)]"></div>
+<!-- Bottom Left -->
+<div class="absolute bottom-0 left-0 w-8 h-8 rounded-bl-[24px] border-b-[3.5px] border-l-[3.5px] border-primary-fixed shadow-[0_0_12px_rgba(189,237,221,0.6)]"></div>
+<!-- Bottom Right -->
+<div class="absolute bottom-0 right-0 w-8 h-8 rounded-br-[24px] border-b-[3.5px] border-r-[3.5px] border-primary-fixed shadow-[0_0_12px_rgba(189,237,221,0.6)]"></div>
+<!-- Animated Breathing Scanning Line -->
+<div class="absolute inset-x-3 h-[2.5px] bg-gradient-to-r from-transparent via-primary-fixed to-transparent rounded-full shadow-[0_0_14px_rgba(189,237,221,0.9)] animate-[scanLaser_3.2s_ease-in-out_infinite] pointer-events-none"></div>
+<!-- Frame Detection Header Pill -->
+<div class="self-center px-3 py-1 rounded-full bg-inverse-surface/85 backdrop-blur-md shadow-sm">
+<p class="font-label-sm text-label-sm text-surface-container-lowest tracking-wide flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed animate-pulse">center_focus_strong</span>
+          बैच व समाप्ति तिथि यहां रखें
+        </p>
+</div>
+<!-- Detected Simulated Bounding Box -->
+<div class="self-center w-4/5 py-1.5 px-2 rounded-lg bg-primary-fixed/20 backdrop-blur-sm border border-primary-fixed/40 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary-fixed font-semibold tracking-wider">B.No. 4019</span>
+<span class="font-label-sm text-label-sm text-surface-container-lowest opacity-90">EXP: 08/2026</span>
+</div>
+</div>
+<!-- Live OCR Recognition Floater Pill -->
+<div class="relative z-20 mb-2 px-4 py-2 rounded-full bg-tertiary-container/90 backdrop-blur-md text-on-tertiary-container shadow-md flex items-center gap-2.5 transition-all transform animate-[bounceSmall_2s_infinite]">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-ping"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+</div>
+<p class="font-label-sm text-label-sm font-medium">
+        खोज रहे हैं... <span class="font-semibold text-primary-fixed">"PCM-650"</span> <span class="opacity-75">|</span> <span class="font-semibold text-primary-fixed">"B4019"</span>
+</p>
+</div>
+</div>
+<!-- Instruction Banner (Empathetic De-escalating Medical Tone) -->
+<div class="w-full mt-3 px-3 py-2.5 rounded-2xl bg-surface-container-low flex items-center gap-3">
+<div class="w-9 h-9 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">document_scanner</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">
+        दवा के पत्ते या डिब्बे का पिछला हिस्सा लाएं
+      </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">
+        Keep the batch &amp; expiry text flat under gentle light
+      </p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 ml-auto opacity-70">verified_user</span>
+</div>
+<!-- Privacy Reassurance Floating Tag -->
+<div class="flex items-center justify-center gap-1.5 my-2">
+<span class="material-symbols-outlined text-[15px] text-primary">lock</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">डिवाइस में ही सुरक्षित स्कैन • कोई फोटो अपलोड नहीं होती</span>
+</div>
+<!-- Frosted Bottom Controls Drawer -->
+<div class="w-full mt-1 p-4 rounded-3xl bg-surface-container shadow-md flex items-center justify-around gap-4">
+<!-- Gallery Action -->
+<button class="flex flex-col items-center justify-center min-w-[72px] min-h-[64px] rounded-2xl p-1.5 hover:bg-surface-container-high active:scale-95 transition-all text-on-surface" id="btn-gallery" type="button">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-secondary mb-1">
+<span class="material-symbols-outlined text-[24px]">photo_library</span>
+</div>
+<span class="font-label-sm text-label-sm leading-tight text-center">गैलरी</span>
+</button>
+<!-- Large Tactile Shutter Button -->
+<div class="relative flex items-center justify-center">
+<!-- Outer Concentric Breathing Halo -->
+<div class="absolute w-[86px] h-[86px] rounded-full bg-primary/15 animate-ping pointer-events-none"></div>
+<div class="absolute w-[80px] h-[80px] rounded-full bg-primary/20 pointer-events-none"></div>
+<!-- Primary Shutter -->
+<button aria-label="फोटो खींचकर जांचें (Capture and Verify)" class="relative z-10 w-[68px] h-[68px] rounded-full bg-primary text-on-primary hover:bg-primary-container active:scale-90 transition-all flex items-center justify-center shadow-lg group" id="btn-shutter" type="button">
+<div class="w-[54px] h-[54px] rounded-full bg-surface-container-lowest flex items-center justify-center shadow-inner group-hover:scale-95 transition-transform">
+<div class="w-[42px] h-[42px] rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px] text-on-primary group-hover:rotate-45 transition-transform">camera</span>
+</div>
+</div>
+</button>
+</div>
+<!-- Manual Entry Action -->
+<button class="flex flex-col items-center justify-center min-w-[72px] min-h-[64px] rounded-2xl p-1.5 hover:bg-surface-container-high active:scale-95 transition-all text-on-surface" id="btn-manual" type="button">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-secondary mb-1">
+<span class="material-symbols-outlined text-[24px]">keyboard</span>
+</div>
+<span class="font-label-sm text-label-sm leading-tight text-center">हाथ से लिखें</span>
+</button>
+</div>
+<!-- Toast / Tip Modal Overlay (Hidden by Default) -->
+<div class="hidden fixed inset-x-4 top-24 z-50 p-4 rounded-2xl bg-surface-container-lowest shadow-xl transition-all duration-200" id="tip-modal">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-label-lg text-label-lg text-on-surface">स्पष्ट स्कैन के लिए टिप्स</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          1. दवा के पत्ते पर सीधी लाइट (Reflections) न पड़ने दें।<br/>
+          2. कम रोशनी में ऊपर दिए 'टॉर्च' बटन का इस्तेमाल करें।<br/>
+          3. यदि प्रिंट मिटा हुआ हो, तो 'हाथ से लिखें' बटन चुनें।
+        </p>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high" id="btn-close-tip" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Interactive Torch Toggle
+    const torchBtn = document.getElementById('btn-torch');
+    const torchIcon = document.getElementById('torch-icon');
+    const torchText = document.getElementById('torch-text');
+    let torchActive = false;
+
+    if (torchBtn && torchIcon && torchText) {
+      torchBtn.addEventListener('click', function() {
+        torchActive = !torchActive;
+        if (torchActive) {
+          torchIcon.innerText = 'flashlight_off';
+          torchText.innerText = 'टॉर्च बंद';
+          torchBtn.classList.remove('bg-surface/20');
+          torchBtn.classList.add('bg-primary', 'text-on-primary');
+        } else {
+          torchIcon.innerText = 'flashlight_on';
+          torchText.innerText = 'टॉर्च ऑन';
+          torchBtn.classList.add('bg-surface/20');
+          torchBtn.classList.remove('bg-primary', 'text-on-primary');
+        }
+      });
+    }
+
+    // Shutter Trigger Haptic Micro-reaction
+    const shutter = document.getElementById('btn-shutter');
+    if (shutter) {
+      shutter.addEventListener('click', function() {
+        if (window.navigator && window.navigator.vibrate) {
+          window.navigator.vibrate([40]);
+        }
+        shutter.classList.add('scale-75');
+        setTimeout(() => shutter.classList.remove('scale-75'), 180);
+      });
+    }
+
+    // Quick scanning tips popup
+    const tipsBtn = document.getElementById('btn-tips');
+    const tipModal = document.getElementById('tip-modal');
+    const closeTipBtn = document.getElementById('btn-close-tip');
+
+    if (tipsBtn && tipModal && closeTipBtn) {
+      tipsBtn.addEventListener('click', () => {
+        tipModal.classList.toggle('hidden');
+      });
+      closeTipBtn.addEventListener('click', () => {
+        tipModal.classList.add('hidden');
+      });
+    }
+
+    // Close screen return simulation
+    const closeBtn = document.getElementById('btn-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        if (window.history.length > 1) {
+          window.history.back();
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_-2px_rgba(43,58,74,0.06)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-20 px-2 max-w-lg mx-auto"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[52px] py-1 text-on-surface-variant hover:text-on-surface transition-all rounded-2xl" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">shield_with_house</span><span class="font-label-sm text-label-sm leading-tight mt-0.5">होम / Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[52px] -mt-4 py-1 transition-all text-primary font-semibold" data-path="scan-and-check" href="#"><div class="w-12 h-12 rounded-full bg-primary text-on-primary shadow-[0_8px_16px_rgba(56,100,88,0.28)] flex items-center justify-center mb-0.5"><span class="material-symbols-outlined text-[24px]">photo_camera</span></div><span class="font-label-sm text-label-sm font-semibold text-primary leading-tight">दवा जांचें</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[52px] py-1 text-on-surface-variant hover:text-on-surface transition-all rounded-2xl" data-path="history" href="#"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span class="font-label-sm text-label-sm leading-tight mt-0.5">इतिहास</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[52px] py-1 text-on-surface-variant hover:text-on-surface transition-all rounded-2xl" data-path="help-and-privacy" href="#"><span class="material-symbols-outlined text-[24px]">health_and_safety</span><span class="font-label-sm text-label-sm leading-tight mt-0.5">मदद व सुरक्षा</span></a></div></nav></body></html>

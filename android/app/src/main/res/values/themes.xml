@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.MedCheck" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#FAF8F2</item>
+        <item name="android:navigationBarColor">#FAF8F2</item>
+    </style>
+</resources>

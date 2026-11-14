@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>MedCheck (मेडचेक)</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#214e43", "primary": "#386458", "on-secondary": "#ffffff", "tertiary-container": "#7a6e97", "primary-container": "#507d70", "surface-bright": "#fcf9f2", "on-primary-fixed": "#002019", "surface-variant": "#e5e2db", "tertiary-fixed-dim": "#cebfed", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#4c4167", "on-tertiary-container": "#fffbff", "surface": "#fcf9f2", "inverse-on-surface": "#f3f0e9", "on-primary-container": "#f4fffa", "on-error": "#ffffff", "background": "#fcf9f2", "surface-container-highest": "#e5e2db", "on-tertiary-fixed": "#1f1539", "on-background": "#1c1c18", "secondary-fixed": "#c7e7ff", "error": "#ba1a1a", "error-container": "#ffdad6", "surface-dim": "#dcdad3", "secondary-fixed-dim": "#a7cbe6", "inverse-surface": "#31312c", "outline": "#717975", "tertiary": "#61567d", "on-secondary-fixed": "#001e2e", "on-tertiary": "#ffffff", "outline-variant": "#c0c8c4", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#a1d0c1", "on-error-container": "#93000a", "tertiary-fixed": "#e9ddff", "surface-container-low": "#f6f3ec", "primary-fixed": "#bdeddd", "surface-container-high": "#ebe8e1", "on-secondary-fixed-variant": "#264b61", "inverse-primary": "#a1d0c1", "on-surface-variant": "#404845", "secondary-container": "#bde2fd", "surface-tint": "#3a675b", "on-secondary-container": "#41657c", "secondary": "#3f627a", "surface-container": "#f1eee7", "on-surface": "#1c1c18" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-xl": "2.25rem", "margin-mobile": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1.5rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-xl": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["12px", {"lineHeight": "18px", "letterSpacing": "0.4px", "fontWeight": "500"}], "headline-xl": ["32px", {"lineHeight": "40px", "fontWeight": "700"}], "label-lg": ["16px", {"lineHeight": "22px", "letterSpacing": "0.2px", "fontWeight": "600"}], "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "body-lg": ["17px", {"lineHeight": "26px", "fontWeight": "400"}], "headline-xl-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "headline-lg-mobile": ["21px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.3px", "fontWeight": "600"}], "body-xl": ["19px", {"lineHeight": "30px", "fontWeight": "400"}] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;background-color:#fcf9f2;color:#1c1c18;font-family:'Plus Jakarta Sans',sans-serif;-webkit-tap-highlight-color:transparent;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(43,58,74,0.05)] pt-safe"><div class="h-20 px-4 flex items-center justify-between gap-3"><div class="flex items-center gap-2 min-w-0"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="MedCheck Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDRbnnP3cjFxDAO82JMTWVU1w1eks2F_4ytHIW9Y_qptNxyj6AIhE2xvNhsv7QcOr8EDqorW4AileRDfNK7zH_EX5sT1pZPrFk2jaX7zeTAq6tTz0sjeGUaqxKaS3_n4j-6G-kvFBGas6GGBp_zcTfhLSohS8uTRgJPIsECcZN0_oVvJ4mJ2Okw9wmI9vfDkNTLVmpq2HXMun6YF1ZvxK162PrBY8jIflTdn3ri1tY"/><div class="flex flex-col min-w-0"><h1 class="font-headline-md text-headline-md text-secondary truncate leading-tight">Batch Verification Result</h1><span class="font-label-sm text-label-sm text-on-surface-variant">MedCheck (मेडचेक)</span></div></div><div class="flex items-center gap-2 shrink-0"><a aria-label="Helpline" class="min-w-[44px] min-h-[44px] rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-secondary transition-colors" href="tel:1800114477"><span class="material-symbols-outlined text-[20px]">call</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-4 pt-20 pb-10 bg-surface flex-grow"><div class="flex flex-col w-full pb-8">
+<!-- Step Indicator -->
+<div class="w-full mb-6">
+<div class="flex items-center justify-between gap-1.5 px-1 mb-2.5">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">1. स्कैन</span>
+</div>
+<div class="h-0.5 w-4 bg-primary-fixed-dim rounded-full"></div>
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center shrink-0">
+          2
+        </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold truncate">2. पुष्टि</span>
+</div>
+<div class="h-0.5 w-4 bg-primary-fixed-dim rounded-full"></div>
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm flex items-center justify-center shrink-0 animate-pulse">
+          3
+        </span>
+<span class="font-label-sm text-label-sm text-secondary truncate font-semibold">3. सरकारी मिलान</span>
+</div>
+</div>
+<!-- Pill Progress Line -->
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden p-0.5">
+<div class="bg-primary h-full rounded-full transition-all duration-700 ease-out w-[72%] shadow-sm"></div>
+</div>
+</div>
+<!-- Calming Verification Pulse Stage -->
+<div class="w-full bg-surface-container-lowest rounded-[28px] p-6 shadow-[0_8px_30px_-6px_rgba(43,58,74,0.06)] flex flex-col items-center text-center relative overflow-hidden mb-5">
+<!-- Ambient organic gradient ripples in background -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary-fixed/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-44 h-44 bg-tertiary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Central Calming Shield & Pill Animation Area -->
+<div class="relative w-36 h-36 flex items-center justify-center my-3">
+<!-- Expanding ripple wave 1 -->
+<div class="absolute inset-0 rounded-full bg-primary-fixed/35 animate-ping opacity-40" style="animation-duration: 3.2s;"></div>
+<!-- Expanding ripple wave 2 -->
+<div class="absolute inset-2 rounded-full bg-tertiary-fixed-dim/25 animate-pulse" style="animation-duration: 2.4s;"></div>
+<!-- Therapeutic soft glowing pod -->
+<div class="relative z-10 w-28 h-28 rounded-full bg-gradient-to-br from-surface-container-low via-surface-container-lowest to-surface-container flex items-center justify-center shadow-[0_12px_28px_-4px_rgba(56,100,88,0.15)]">
+<!-- Rotating leaf ring SVG -->
+<svg class="absolute inset-1.5 w-[100px] h-[100px] text-primary/30 animate-spin" fill="none" style="animation-duration: 18s;" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="46" stroke="currentColor" stroke-dasharray="4 8" stroke-linecap="round" stroke-width="2"></circle>
+<path d="M50 4 C54 16, 62 20, 68 20 C62 26, 54 30, 50 42 C46 30, 38 26, 32 20 C38 20, 46 16, 50 4 Z" fill="#507d70" opacity="0.4"></path>
+<path d="M50 96 C54 84, 62 80, 68 80 C62 74, 54 70, 50 58 C46 70, 38 74, 32 80 C38 80, 46 84, 50 96 Z" fill="#7a6e97" opacity="0.35"></path>
+</svg>
+<!-- Floating Medicine Capsule & Trust Shield Icon Bundle -->
+<div class="relative flex items-center justify-center">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shadow-inner">
+<span class="material-symbols-outlined text-[34px] animate-bounce" style="animation-duration: 2.8s; font-variation-settings: 'FILL' 1;">
+              health_and_safety
+            </span>
+</div>
+<span class="absolute -top-1 -right-2 text-tertiary">
+<span class="material-symbols-outlined text-[20px] animate-pulse">medication</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Status Headings -->
+<div class="mt-2 mb-4 max-w-xs flex flex-col items-center">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant mb-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">प्रमाणीकरण जारी (Live)</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">
+        दवा की जांच हो रही है...
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+        CDSCO, राज्य औषधि नियंत्रण और NSQ डेटाबेस में <span class="font-semibold text-secondary">1,42,000+ अलर्ट</span> से मिलान किया जा रहा है...
+      </p>
+</div>
+<!-- Live Checking Step Badges -->
+<div class="w-full bg-surface-container-low rounded-2xl p-3.5 flex flex-col gap-2.5 text-left mb-2">
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+          केंद्रीय औषधि डेटाबेस (CDSCO)
+        </span>
+<span class="font-label-sm text-label-sm text-primary font-medium">जांच पूर्ण</span>
+</div>
+<div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-full"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface font-label-md text-label-md pt-1">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] animate-spin">sync</span>
+          राज्य प्रयोगशाला अलर्ट (NSQ Portal)
+        </span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">मिलान जारी...</span>
+</div>
+<div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-2/3 animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Scanned Medicine Preview Card -->
+<div class="w-full bg-surface-container-lowest rounded-[24px] p-5 shadow-[0_4px_24px_-4px_rgba(43,58,74,0.05)] mb-5">
+<div class="flex items-center justify-between pb-3 mb-3 border-b-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">document_scanner</span>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">स्कैन की गई दवा का विवरण</h3>
+</div>
+<button aria-label="Edit detected details" class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant text-label-sm font-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+<span>सुधारें</span>
+</button>
+</div>
+<!-- Medicine Summary Grid -->
+<div class="flex gap-4 items-start">
+<!-- High quality blister pack thumbnail -->
+<div class="w-20 h-20 rounded-2xl bg-surface-container-low overflow-hidden shrink-0 relative shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a clean pharmaceutical blister foil strip with white tablets labeled Calpol 650 under soft diffuse neutral light, medical handbook aesthetic, high detail on packaging text and batch stamp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYrFnXl4WbfcgZTUuNJuuctYVWLU46Lvep13LvFkIZYNkM6gA1TD6EStSHXHfOVOxBOHKZT915Jv3PBi4SM8fwQDjJvPjHzjELrRZARsGgr1fQHGBt69XsDByoycwEYpp1Z3V1y20CFTbEFC-6orSjsX6mhl21_PSXo0KhzxXI-hZiyQBn8ws4rFn_Ocr8ObQzDxEInejKqm_zFKKOa6yyevIglWxniKQ_GS7GtsA"/>
+<div class="absolute bottom-1 right-1 bg-surface-bright/90 backdrop-blur-sm px-1 rounded text-[10px] text-on-surface-variant font-semibold">
+          AI Read
+        </div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface font-bold truncate">
+            Calpol 650
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+            Paracetamol IP
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate mt-0.5">
+          GlaxoSmithKline Pharmaceuticals Ltd.
+        </p>
+<!-- Monospace Batch High-Legibility Badge -->
+<div class="mt-3 flex flex-wrap items-center gap-2">
+<div class="inline-flex items-center gap-1.5 bg-primary-fixed/40 px-3 py-1.5 rounded-xl shadow-[0_2px_8px_rgba(56,100,88,0.08)]">
+<span class="material-symbols-outlined text-on-primary-fixed-variant text-[16px]">qr_code_2</span>
+<span class="font-mono text-label-md font-bold tracking-wider text-on-primary-fixed">
+              BATCH: KL-9021-B
+            </span>
+</div>
+<div class="inline-flex items-center gap-1 bg-surface-container-low px-2.5 py-1.5 rounded-xl text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">event</span>
+<span class="font-label-sm text-label-sm font-semibold">
+              EXP: 08/2026
+            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Supplementary Verification Pill Info -->
+<div class="mt-4 pt-3.5 bg-surface-container-low/70 rounded-xl px-3.5 py-2.5 flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm truncate">विनिर्माण तिथि: MFG: 09/2024</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold shrink-0">पैकेजिंग स्पष्ट</span>
+</div>
+</div>
+<!-- Reassurance & De-escalation Note (Empathetic Civic Copy) -->
+<div class="w-full bg-secondary-fixed/40 rounded-[20px] p-4 flex items-start gap-3.5 mb-6">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">spa</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-label-lg text-label-lg text-on-secondary-fixed font-bold leading-tight">
+        कृपया धीरज रखें (Stay calm)
+      </h4>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant mt-1 leading-relaxed">
+        यदि आपने यह दवा पहले ही ले ली है, तो घबराएं नहीं — जांच पूरी होते ही आपको अधिकृत सुरक्षा स्थिति और जरूरत पड़ने पर डॉक्टर से परामर्श की सीधी जानकारी मिलेगी।
+      </p>
+</div>
+</div>
+<!-- Secondary Actions -->
+<div class="w-full flex flex-col gap-2.5">
+<button class="w-full min-h-[52px] rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 transition-all active:scale-[0.98]" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+<span>विवरण बदलें या फिर से स्कैन करें</span>
+</button>
+<div class="flex items-center justify-center gap-1.5 py-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">lock</span>
+<span>सुरक्षित व निजी: कोई भी फोटो क्लाउड पर सुरक्षित नहीं की जाती</span>
+</div>
+</div>
+</div>
+<script>
+  // Gentle simulated progress ticker for reassuring cadence
+  (function() {
+    const liveStatusText = document.querySelector('.animate-pulse');
+    if (liveStatusText) {
+      setTimeout(() => {
+        liveStatusText.textContent = 'राष्ट्रीय प्रयोगशालाओं से संपर्क...';
+      }, 2400);
+    }
+  })();
+</script></main></body></html>

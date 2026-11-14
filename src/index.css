@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Bengali", "Noto Sans Telugu", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-surface: #fcf9f2;
+  --color-surface-dim: #dcdad3;
+  --color-surface-bright: #fcf9f2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f3ec;
+  --color-surface-container: #f1eee7;
+  --color-surface-container-high: #ebe8e1;
+  --color-surface-container-highest: #e5e2db;
+
+  --color-on-surface: #1c1c18;
+  --color-on-surface-variant: #404845;
+  --color-outline: #717975;
+  --color-outline-variant: #c0c8c4;
+
+  --color-primary: #386458;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #507d70;
+  --color-on-primary-container: #f4fffa;
+  --color-primary-fixed: #bdeddd;
+  --color-primary-fixed-dim: #a1d0c1;
+  --color-on-primary-fixed: #002019;
+  --color-on-primary-fixed-variant: #214e43;
+
+  --color-secondary: #3f627a;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #bde2fd;
+  --color-on-secondary-container: #264b61;
+  --color-secondary-fixed: #c7e7ff;
+  --color-secondary-fixed-dim: #a7cbe6;
+  --color-on-secondary-fixed: #001e2e;
+
+  --color-tertiary: #61567d;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #7a6e97;
+  --color-on-tertiary-container: #fffbff;
+  --color-tertiary-fixed: #e9ddff;
+
+  --color-flagged-bg: #f8e5e2;
+  --color-flagged-accent: #b84a39;
+  --color-flagged-ink: #5a1c14;
+
+  --color-possible-bg: #fcf3e3;
+  --color-possible-accent: #b26b00;
+  --color-possible-ink: #4a3816;
+
+  --color-notfound-bg: #e7eff3;
+  --color-notfound-accent: #4c6c7e;
+  --color-notfound-ink: #1e3542;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #fcf9f2;
+    color: #1c1c18;
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    overscroll-behavior-y: none;
+  }
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.high-contrast-mode {
+  filter: contrast(1.14);
+}
+
+.high-contrast-mode .text-on-surface-variant {
+  color: #1c1c18;
+}
+
+@keyframes scanLaser {
+  0%, 100% {
+    transform: translateY(16px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(220px);
+    opacity: 1;
+  }
+}
+
+.animate-scan-laser {
+  animation: scanLaser 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scan-laser {
+    animation: none;
+  }
+}
