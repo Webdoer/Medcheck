@@ -1,112 +1,118 @@
-# MedCheck (मेडचेक) 🩺🛡️
+# MedCheck (मेडचेक)
 
-> **A free, mobile-first public health utility for Indian families to verify medicine batches against government quality alerts (CDSCO NSQ & Spurious Drug Bulletins) and Section 26A banned drugs/FDCs.**
-
----
-
-## 🌟 Overview
-
-**MedCheck** is a privacy-first, accessible public health application designed to empower citizens to verify whether their medicine stock (tablets, capsules, syrups, blisters) has been flagged by the **Central Drugs Standard Control Organization (CDSCO)** or state regulatory testing laboratories for substandard quality (NSQ) or spurious manufacturing.
-
-Built with a calming, compassionate theme (cream background, misty sage, pale sky blue, soft lavender primary, slate-blue text) and zero tracking/login requirements, MedCheck ensures that health safety is accessible to every Indian family.
+> A mobile-first public health utility for Indian families to verify medicine batches against government quality alerts (CDSCO NSQ and Spurious Drug Bulletins) and Section 26A banned drugs and fixed-dose combinations (FDCs).
 
 ---
 
-## 🚀 Key Features
+## Overview
 
-### 1. 📷 Smart Label Scanner & OCR
-- Point your phone camera at a medicine blister or box. Gemini AI extracts the **medicine name**, **batch number (B.No.)**, and **expiry date**.
-- **Low Confidence Highlighting**: Fields recognized with less than 70% OCR confidence are automatically highlighted for manual review.
-- **Robust Camera & Fallback**: Full support for live CameraX/WebRTC video streams with torch toggle, error recovery, and a native phone camera photo upload fallback (`<input type="file" capture="environment">`).
+**MedCheck** is an accessible, privacy-centric public health application designed to enable citizens to verify whether medicine stock (tablets, capsules, syrups, blisters) has been flagged by the **Central Drugs Standard Control Organization (CDSCO)** or state regulatory testing laboratories for substandard quality (Not of Standard Quality / NSQ) or spurious manufacturing.
 
-### 2. 🛡️ Comprehensive Banned & Flagged Database
-- **444 Banned Drugs & FDCs**: Complete integration of all Sr. No. 1–444 prohibited drugs under **Section 26A of the Drugs and Cosmetics Act, 1940** (sourced directly from official Ministry of Health Gazette notifications).
-- **CDSCO NSQ Bulletins**: Thousands of government-flagged substandard/spurious batches with search, filters, and direct gazette notes.
-- **Look-Alike Character Normalization**: Advanced fuzzy matching handles look-alike characters (`0/O`, `1/I/L`, `5/S`, `8/B`).
-
-### 3. 🌐 6 Indian Languages & Single Female Voice TTS
-- Full support for **Hindi (हिन्दी)** [Default], **English**, **Tamil (தமிழ்)**, **Bengali (বাংলা)**, **मराठी (Marathi)**, and **Telugu (తెలుగు)**.
-- **Natural Female TTS Audio Guide**: Listen to results and guidance in your chosen language using a warm, compassionate natural voice.
-
-### 4. 🔒 100% On-Device Privacy & History
-- No login or registration required.
-- Verification history is stored **locally on your device only** (last 20 checks) with SQLite/LocalStorage persistence. No photos or personal data are ever uploaded to third-party servers.
-
-### 5. 📞 Direct Helpline & Guidance
-- **Tap-to-Call CDSCO National Helpline**: Instant one-tap access to toll-free **1800-11-4477**.
-- **Actionable Steps**: Clear guidance on what to do if a medicine is flagged (stop use, consult a doctor or primary health center [PHC], inform the chemist).
-- **No False Reassurance**: "Not found" results never use green colors or call a medicine "safe"—instead, they clearly state that absence from the alert list is not a guarantee and prompt packaging checks.
+Engineered with compassionate design principles and zero tracking or account registration requirements, MedCheck ensures health safety information is transparently accessible to every household.
 
 ---
 
-## 📱 Android Native App Source Included (`/android/`)
-In addition to the high-performance Web PWA, MedCheck includes a complete native Android application codebase in Kotlin, Jetpack Compose, and Material 3 under `/android/`:
-- **8 Screens**: Language Picker, Home, Scan (CameraX), Confirm, Checking, Result, History, Help.
-- **Architecture**: MVVM, Room Database with seeded demo data, Retrofit/Ktor backend proxy communication, and Android `TextToSpeech`.
+## Key Features
+
+### 1. Smart Label Scanner and OCR
+- **Automated Label Extraction**: Uses Gemini AI vision to extract the medicine name, batch number (B.No.), and expiry date directly from package labels.
+- **Low-Confidence Highlighting**: Fields identified with less than 70% OCR confidence are flagged for manual verification.
+- **Camera Support and Fallback**: Supports real-time camera streams with torch toggle, error recovery, and standard file upload fallbacks.
+
+### 2. Regulatory Alert and Banned Drug Database
+- **Section 26A Banned Drugs and FDCs**: Fully indexed database of prohibited drugs under Section 26A of the Drugs and Cosmetics Act, 1940 (sourced from official Ministry of Health Gazette notifications).
+- **CDSCO NSQ Bulletins**: Comprehensive database of government-flagged substandard and spurious batches with search and filtering capabilities.
+- **Character Normalization**: Fuzzy matching normalizes common OCR character ambiguities (e.g., `0/O`, `1/I/L`, `5/S`, `8/B`).
+
+### 3. Multilingual Support and Audio Guidance
+- **Six Indian Languages**: Localized in Hindi (default), English, Tamil, Bengali, Marathi, and Telugu.
+- **Text-to-Speech Guidance**: Integrated audio assistance delivers verification results and safety guidance in the user's preferred language.
+
+### 4. Privacy by Design
+- **No Registration Required**: Complete anonymity with no account creation or login mechanism.
+- **Local Data Persistence**: Verification history is stored solely on the client device (up to 20 recent checks). No user images or personal identification data are retained on external servers.
+
+### 5. Regulatory Helpline and Verification Guidance
+- **CDSCO National Helpline**: Integrated direct calling support for the national toll-free helpline (1800-11-4477).
+- **Actionable Steps**: Clear guidance on steps to take if a batch is flagged (discontinuing use, consulting a medical practitioner, contacting the pharmacy).
+- **Balanced Safety Communication**: Records not present in alert bulletins are clearly communicated as "No active alert found" rather than a definitive safety certification, encouraging standard packaging vigilance.
 
 ---
 
-## 🛠️ Tech Stack
+## Android Native Application (`/android/`)
 
-- **Frontend**: React 19, TypeScript, Tailwind CSS v4, Lucide Icons, Vite.
-- **Backend / API Proxy**: Node.js, Express, `@google/genai` (Gemini SDK for OCR label extraction).
-- **Android App (Native)**: Kotlin, Jetpack Compose, Material 3, Room, CameraX, Android TTS.
+In addition to the Web PWA, MedCheck provides a native Android application built with Kotlin, Jetpack Compose, and Material 3:
+- **Screens**: Language Selection, Home, Scan (CameraX), Confirmation, Verification, Results, History, and Help.
+- **Architecture**: MVVM pattern, Room Database with seeded local alert data, Retrofit/Ktor proxy client, and Android TextToSpeech framework.
 
 ---
 
-## 🏃 Local Development & Running
+## Technology Stack
 
-1. **Install Dependencies**:
+- **Frontend**: React 19, TypeScript, Tailwind CSS, Lucide Icons, Vite
+- **Backend / Proxy API**: Node.js, Express, `@google/genai` (Gemini SDK)
+- **Native Android**: Kotlin, Jetpack Compose, Material 3, Room, CameraX, Android TTS
+
+---
+
+## Installation and Setup
+
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- Gemini API Key
+
+### Steps
+
+1. **Install Dependencies**
    ```bash
    npm install
    ```
 
-2. **Configure Environment Variables**:
-   Copy `.env.example` to `.env` and provide your Gemini API key:
+2. **Configure Environment Variables**
+   Create a `.env` file based on `.env.example`:
    ```env
    GEMINI_API_KEY="your-gemini-api-key"
    ```
 
-3. **Start Development Server**:
+3. **Run the Development Server**
    ```bash
    npm run dev
    ```
-   The app runs locally on `http://localhost:3000`.
+   The local application will start at `http://localhost:3000`.
 
-4. **Build for Production**:
+4. **Production Build**
    ```bash
    npm run build
    ```
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ├── server.ts                 # Express server & Gemini OCR proxy API
 ├── src/
 │   ├── App.tsx               # Main React SPA router & state management
 │   ├── main.tsx              # React entry point
-│   ├── index.css             # Tailwind CSS import & custom animations
+│   ├── index.css             # Tailwind CSS styles & animations
 │   ├── assets/               # Sample blister images & media assets
 │   ├── components/           # UI Views (Home, Scan, Result, History, Help, etc.)
 │   ├── i18n/                 # 6-language translation bundles
 │   └── shared/               # CDSCO dataset & 444 Section 26A banned drugs
 ├── android/                  # Native Android App (Kotlin, Compose, Room, CameraX)
-└── public/                   # Static assets, PWA manifest, and audio guides
+└── public/                   # Static assets, PWA manifest, and audio files
 ```
 
 ---
 
-## 📄 License & Public Health Disclaimer
+## Disclaimer
 
-MedCheck is a public health utility created to assist citizens in verifying regulatory alerts. It provides official government regulatory alert lookups only and **does not provide medical diagnosis, dosage, or treatment advice**. In case of health concerns, always consult a qualified medical professional or pharmacist.
+MedCheck is a public health utility created to assist citizens in referencing official regulatory alerts. It provides government public alert lookups only and **does not provide medical diagnosis, dosage recommendations, or treatment advice**. For medical decisions or concerns, always consult a qualified healthcare professional or licensed pharmacist.
 
 ---
 
-## 👥 Team Members
+## Team Members
 
 - **Member 1:** Aryaman Sharma
 - **Member 2:** Siddhartha Pandey
 - **Member 3 (Leader):** Sanyam Kumar
-
