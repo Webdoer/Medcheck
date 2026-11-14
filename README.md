@@ -101,3 +101,12 @@ In addition to the high-performance Web PWA, MedCheck includes a complete native
 ## 📄 License & Public Health Disclaimer
 
 MedCheck is a public health utility created to assist citizens in verifying regulatory alerts. It provides official government regulatory alert lookups only and **does not provide medical diagnosis, dosage, or treatment advice**. In case of health concerns, always consult a qualified medical professional or pharmacist.
+
+---
+
+## 👥 Team Members
+
+- **Member 1:** Aryaman Sharma
+- **Member 2:** Siddhartha Pandey
+- **Member 3 (Leader):** Sanyam Kumar
+
