@@ -1,4 +1,4 @@
-# MedCheck (मेडचेक)
+# MedCheck 
 
 > A mobile-first public health utility for Indian families to verify medicine batches against government quality alerts (CDSCO NSQ and Spurious Drug Bulletins) and Section 26A banned drugs and fixed-dose combinations (FDCs).
 
